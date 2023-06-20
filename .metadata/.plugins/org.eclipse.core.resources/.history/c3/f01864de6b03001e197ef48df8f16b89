@@ -1,0 +1,38 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      -id: greet-api
+       uri:lb://GREET-API
+       predicates:
+        - path=/greet
+      -id: welcome-api
+       uri: lb://WELCOME-API
+       predicates:
+        - path=/welcome
+    application:
+     name: CLOUD-API-GATEWAY
+ sever:
+  port: 3333
+ 
+spring:
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: true
+        lowerCaseServiceId: true
+      routes:
+      - id: stock-price-api
+        uri: lb://STOCK-PRICE-API
+        predicates:
+        - Path=/price/{companyName}
+      - id: stock-calc-api
+        uri: lb://STOCK-CALC-API
+        predicates:
+        - Path=/calc/{companyName}/{qty}
+  application:
+    name: CLOUD-API-GATEWAY

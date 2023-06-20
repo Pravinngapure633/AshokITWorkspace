@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+      - id: greet-api
+        uri:
+           lb://GREET-SERVICE
+        predicates:
+        - Path=/greet
+      - id: welcome-api
+        uri:
+           lb://WELCOME-SERVICE
+        predicates:
+        - Path=/welcome
+  application:
+    name: CLOUD-API-GATEWAY
+sever:
+  port: 3333
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_URL:http://localhost:9090}/eureka/
+  

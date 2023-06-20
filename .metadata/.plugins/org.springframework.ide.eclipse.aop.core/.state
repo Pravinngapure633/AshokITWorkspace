@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="24.1-SBMS-Api-GateWay-SpringCloud-Current"/>
+<aop-project name="27-SBMS-Circuit-Breaker"/>
+<aop-project name="30-SBMS-Greet-Config-Client"/>
+<aop-project name="22-SBMS-Rest-API-Eureka-Client-1"/>
+<aop-project name="21-SBMS-Service-Registry"/>
+<aop-project name="26-SBMS-Admin-Client-Application"/>
+<aop-project name="29-Sb-RedisCache"/>
+<aop-project name="28-SBMS-Mono-And-Flux-Object"/>
+<aop-project name="23-SBMS-Rest-API-Eureka-Client-2"/>
+<aop-project name="25-SBMS-Admin-Service"/>
+<aop-project name="24-SBMS-API-GATEWAY-Eureka-Client-3"/>
+<aop-project name="30-SBMS-Config-Server"/>
+</aop-reference-model>
